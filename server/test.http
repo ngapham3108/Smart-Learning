@@ -1,0 +1,59 @@
+### Create User
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "phnga1",
+    "password": "phnga1"
+}
+
+### Login
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "phnga1",
+    "password": "phnga1"
+}
+
+### Verify Token
+GET  http://localhost:5000/api/auth
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjg3MGI3MGI0OWI1ZWZjNGEzZWEyMjciLCJpYXQiOjE2NTM1NTk1MjR9.x66txwjfHS66zm7q_piUULC55HcAYB3Kx0yFvEEEWds
+
+### Create Post
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjg3MGI3MGI0OWI1ZWZjNGEzZWEyMjciLCJpYXQiOjE2NTM2NDgwNDh9.-lnVoQzKVjMiqW4EBr2Fcb8DoRwozQF6jrG3cMaXEWQ
+
+{   
+    "title": "React2",
+    "description": "React full",
+    "url": "google.com",
+    "status": "LEARNED"
+}
+
+### Get Posts
+
+
+GET http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjg3MGI3MGI0OWI1ZWZjNGEzZWEyMjciLCJpYXQiOjE2NTM2NDgwNDh9.-lnVoQzKVjMiqW4EBr2Fcb8DoRwozQF6jrG3cMaXEWQ
+
+### Update Post
+PUT http://localhost:5000/api/posts/628718ea36a1ca425297e846
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjg3MGI3MGI0OWI1ZWZjNGEzZWEyMjciLCJpYXQiOjE2NTMwMjA4NzJ9.6fGpPV-k_PcBtM4H2D56rJTa782GRpe2JAAM0GFrFJk
+
+{   
+    "title": "React3",
+    "description": "React full",
+    "url": "google.com",
+    "status": "LEARNING"
+}
+
+### Delete Post
+DELETE http://localhost:5000/api/posts/628718ea36a1ca425297e846
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Mjg3MGI3MGI0OWI1ZWZjNGEzZWEyMjciLCJpYXQiOjE2NTMwMjA4NzJ9.6fGpPV-k_PcBtM4H2D56rJTa782GRpe2JAAM0GFrFJk

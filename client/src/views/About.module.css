@@ -1,0 +1,16 @@
+.useBackGround {
+    position: relative;
+    background: url('./../assets/AboutBackGround.png') no-repeat center
+        center/cover;
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+}
+.innerContent {
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+}

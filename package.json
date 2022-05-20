@@ -1,0 +1,22 @@
+{
+    "name": "smartlearning",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "prepare": "husky install",
+        "make-beauty": "lint-staged"
+    },
+    "lint-staged": {
+        "server/**/*.{js, json, css}": "prettier --single-quote --trailing-comma all --tab-width 4 --write",
+        "client/**/*.{js, json, css}": "prettier --single-quote --trailing-comma all --tab-width 4 --write"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "husky": "^8.0.1",
+        "lint-staged": "^12.4.1",
+        "prettier": "^2.6.2"
+    }
+}
